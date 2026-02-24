@@ -10,30 +10,40 @@
 <title>ページのタイトル</title>
 </head>
 <body>
-<div id="content">
-    <h1>記事のタイトル</h1>
+<header class="wiki-header">
+    <div class="logo">トロイア語</div>
+    <div class="hamburger">
+        <span></span><span></span><span></span>
+    </div>
+</header>
 
+<nav class="breadcrumb">
+    <a href="#">メインページ</a> &gt; <a href="#">ヘルプ</a> &gt; 編集の仕方
+</nav>
+
+<main id="content">
+    <h1>ダークモード対応のページ</h1>
+    
     <table class="infobox">
-        <tr><th colspan="2" style="text-align:center; background:#b2c4ff;">基本情報</th></tr>
-        <tr><th>設立</th><td>2001年</td></tr>
-        <tr><th>言語</th><td>多言語</td></tr>
+        <tr><th colspan="2" style="text-align:center;">ページ統計</th></tr>
+        <tr><th>作成日</th><td>2026年2月</td></tr>
     </table>
 
     <p>
-        これはWikipedia風のスタイルを適用した段落です。
-        <a href="#">ハイパーリンク</a>はこのような青色になります。
+        OSやブラウザの設定を「ダーク」に切り替えると、背景が黒基調、文字が白基調に自動的に変化します。
+        Wikipediaの現在のUIデザインに基づいた配色を採用しています。
     </p>
 
     <div class="toc">
         <div class="toc-title">目次</div>
         <ul>
-            <li>1 歴史</li>
-            <li>2 特徴</li>
+            <li>1 デザインについて</li>
+            <li>2 実装の詳細</li>
         </ul>
     </div>
 
-    <h2>歴史</h2>
-    <p>ここにはセクションの内容が入ります。</p>
-</div>
+    <h2>デザインについて</h2>
+    <p>リンクの色は、背景が暗くなっても視認性が確保されるよう、明るめの青（#6eaafe）に調整してあります。</p>
+</main>
 </body>
 </html>
