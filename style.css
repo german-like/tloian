@@ -1,0 +1,89 @@
+/* ベースレイアウト */
+body {
+    font-family: sans-serif;
+    background-color: #f6f6f6;
+    color: #202122;
+    margin: 0;
+    line-height: 1.6;
+}
+
+#content {
+    background-color: #ffffff;
+    border: 1px solid #a2a9b1;
+    padding: 1.5em 2em;
+    margin: 10px;
+}
+
+/* 見出しのデザイン */
+h1 {
+    font-family: 'Linux Libertine', 'Georgia', serif;
+    font-size: 1.8em;
+    border-bottom: 1px solid #a2a9b1;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #a2a9b1;
+    margin-top: 1em;
+}
+
+/* リンクの色 */
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #0b0080;
+}
+
+/* 箇条書きと段落 */
+p {
+    margin: 0.5em 0 1em 0;
+}
+
+ul {
+    list-style-type: square;
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="13"><circle cx="2.5" cy="9" r="1.5" fill="black"/></svg>');
+}
+
+/* 目次ボックス (Table of Contents) */
+.toc {
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 7px;
+    display: inline-block;
+    font-size: 95%;
+}
+
+.toc-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* インフォボックス (右側の情報カード) */
+.infobox {
+    float: right;
+    width: 250px;
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    margin: 0 0 1em 1em;
+    padding: 0.2em;
+    font-size: 88%;
+}
+
+.infobox th {
+    background-color: #cedff2;
+    text-align: left;
+    padding: 0.2em 0.4em;
+}
+
+.infobox td {
+    padding: 0.2em 0.4em;
+}
