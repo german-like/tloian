@@ -1,89 +1,112 @@
-/* ベースレイアウト */
+/* --- 変数の定義 (色の管理) --- */
+:root {
+    --bg-color: #f6f6f6;
+    --content-bg: #ffffff;
+    --text-color: #202122;
+    --border-color: #a2a9b1;
+    --link-color: #0645ad;
+    --heading-border: #a2a9b1;
+    --toc-bg: #f8f9fa;
+    --infobox-header: #cedff2;
+    --header-bg: #ffffff;
+}
+
+/* ダークモード設定 (システム設定に連動) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #101418;
+        --content-bg: #202122;
+        --text-color: #eaecf0;
+        --border-color: #54595d;
+        --link-color: #6eaafe;
+        --heading-border: #54595d;
+        --toc-bg: #2a2d2f;
+        --infobox-header: #333940;
+        --header-bg: #1a1d21;
+    }
+}
+
+/* --- ベースレイアウト --- */
 body {
     font-family: sans-serif;
-    background-color: #f6f6f6;
-    color: #202122;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     line-height: 1.6;
 }
 
-#content {
-    background-color: #ffffff;
-    border: 1px solid #a2a9b1;
-    padding: 1.5em 2em;
-    margin: 10px;
+/* --- ヘッダー・ナビゲーション --- */
+.wiki-header {
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1.5em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* 見出しのデザイン */
+.logo { font-weight: bold; font-size: 1.2em; }
+
+/* ハンバーガーメニュー */
+.hamburger {
+    cursor: pointer;
+    padding: 5px;
+}
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+}
+
+/* パンくずリスト */
+.breadcrumb {
+    font-size: 0.75em;
+    padding: 0.5em 2em 0;
+    color: var(--text-color);
+}
+.breadcrumb a { color: inherit; }
+
+/* --- コンテンツエリア --- */
+#content {
+    background-color: var(--content-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.5em 2em;
+    margin: 10px 20px;
+}
+
 h1 {
     font-family: 'Linux Libertine', 'Georgia', serif;
-    font-size: 1.8em;
-    border-bottom: 1px solid #a2a9b1;
-    margin-bottom: 0.25em;
-    padding-bottom: 0.25em;
+    border-bottom: 1px solid var(--heading-border);
 }
 
 h2 {
-    font-size: 1.5em;
-    border-bottom: 1px solid #a2a9b1;
-    margin-top: 1em;
+    border-bottom: 1px solid var(--heading-border);
 }
 
-/* リンクの色 */
 a {
-    color: #0645ad;
+    color: var(--link-color);
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-a:visited {
-    color: #0b0080;
-}
-
-/* 箇条書きと段落 */
-p {
-    margin: 0.5em 0 1em 0;
-}
-
-ul {
-    list-style-type: square;
-    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="13"><circle cx="2.5" cy="9" r="1.5" fill="black"/></svg>');
-}
-
-/* 目次ボックス (Table of Contents) */
 .toc {
-    background-color: #f8f9fa;
-    border: 1px solid #a2a9b1;
-    padding: 7px;
-    display: inline-block;
-    font-size: 95%;
+    background-color: var(--toc-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px;
 }
 
-.toc-title {
-    font-weight: bold;
-    text-align: center;
-}
-
-/* インフォボックス (右側の情報カード) */
 .infobox {
     float: right;
-    width: 250px;
-    background-color: #f8f9fa;
-    border: 1px solid #a2a9b1;
-    margin: 0 0 1em 1em;
-    padding: 0.2em;
-    font-size: 88%;
+    width: 260px;
+    background-color: var(--toc-bg);
+    border: 1px solid var(--border-color);
+    margin-left: 1em;
 }
 
 .infobox th {
-    background-color: #cedff2;
-    text-align: left;
-    padding: 0.2em 0.4em;
-}
-
-.infobox td {
-    padding: 0.2em 0.4em;
+    background-color: var(--infobox-header);
 }
