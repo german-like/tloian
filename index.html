@@ -11,39 +11,40 @@
 </head>
 <body>
 <header class="wiki-header">
-    <div class="logo">トロイア語</div>
-    <div class="hamburger">
-        <span></span><span></span><span></span>
+    <div class="header-content">
+        <div class="logo">トロイア語</div>
+        <div class="header-right">
+            <button class="mode-toggle">表示モード</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
+    <nav class="breadcrumb">
+        <ul>
+            <li><a href="#">メインページ</a></li>
+            <li><a href="#">カテゴリ</a></li>
+            <li>現在の記事</li>
+        </ul>
+    </nav>
 </header>
 
-<nav class="breadcrumb">
-    <a href="#">メインページ</a> &gt; <a href="#">ヘルプ</a> &gt; 編集の仕方
-</nav>
-
 <main id="content">
-    <h1>ダークモード対応のページ</h1>
+    <h1>記事のタイトル</h1>
+    <p>これはWikipedia風のレイアウトです。<a href="#">リンク</a>はこのような色になります。</p>
     
-    <table class="infobox">
-        <tr><th colspan="2" style="text-align:center;">ページ統計</th></tr>
-        <tr><th>作成日</th><td>2026年2月</td></tr>
-    </table>
-
-    <p>
-        OSやブラウザの設定を「ダーク」に切り替えると、背景が黒基調、文字が白基調に自動的に変化します。
-        Wikipediaの現在のUIデザインに基づいた配色を採用しています。
-    </p>
-
     <div class="toc">
         <div class="toc-title">目次</div>
         <ul>
-            <li>1 デザインについて</li>
-            <li>2 実装の詳細</li>
+            <li><a href="#1">1 bar</a></li>
+            <li>2 概要</li>
         </ul>
     </div>
 
-    <h2>デザインについて</h2>
-    <p>リンクの色は、背景が暗くなっても視認性が確保されるよう、明るめの青（#6eaafe）に調整してあります。</p>
+    <h2 id="1">bar</h2>
+    <p>セクションの内容がここに入ります。</p>
 </main>
 </body>
 </html>
