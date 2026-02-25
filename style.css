@@ -1,47 +1,86 @@
-/* 変数の定義 */
 :root {
-    --bg-color: #f9f9f9;
-    --text-color: #2c3e50;
+    /* ライトモード: 白と金 */
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #ffffff;
     --main-content-bg: #ffffff;
-    --sidebar-bg: #ffffff;
-    --border-color: #e0e0e0;
-    --primary-color: #3498db;
-    --code-bg: #2d3436; /* コードブロックは常にダーク系が見やすい */
+    --sidebar-bg: #fdfdfd;
+    --border-color: #e0d5c1; /* 薄い金の境界線 */
+    --accent-gold: #c5a059;  /* 落ち着いた金 */
+    --hover-gold: #d4af37;   /* 明るい金 */
+    --code-bg: #2d3436;
     --code-text: #dfe6e9;
 }
 
-/* ダークモード用の変数上書き */
 body.dark-mode {
-    --bg-color: #1a1a1b;
+    /* ダークモード: 黒と金 */
+    --bg-color: #121212;
     --text-color: #e0e0e0;
-    --main-content-bg: #2d2d2e;
-    --sidebar-bg: #2d2d2e;
-    --border-color: #404040;
-    --primary-color: #5dade2; /* 少し明るめの青に調整 */
+    --header-bg: #1a1a1a;
+    --main-content-bg: #1e1e1e;
+    --sidebar-bg: #1a1a1a;
+    --border-color: #4a3f28; /* 暗めの金の境界線 */
+    --accent-gold: #d4af37;  /* 輝きのある金 */
+    --hover-gold: #f1c40f;
 }
 
-/* 各要素に変数を使用（一部抜粋） */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s; /* 切り替えを滑らかに */
-}
-
-.main-content, .sidebar {
-    background-color: var(--main-content-bg);
-    border: 1px solid var(--border-color);
-}
-
-/* 切り替えボタンのスタイル */
-.mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    background: var(--main-content-bg);
-    color: var(--text-color);
+/* ヘッダーのスタイル */
+.site-header {
+    background-color: var(--header-bg);
+    border-bottom: 2px solid var(--accent-gold);
+    padding: 0 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.site-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-gold);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* 切り替えボタン（ヘッダー内） */
+.mode-toggle {
+    background: transparent;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 6px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+}
+
+.mode-toggle:hover {
+    background: var(--accent-gold);
+    color: var(--header-bg);
+}
+
+/* 見出しの装飾を金に変更 */
+h1, h2 {
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+h2 {
+    border-left: 4px solid var(--accent-gold);
+}
+
+/* リンクの色 */
+a {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-gold);
+    text-decoration: underline;
 }
