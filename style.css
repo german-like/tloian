@@ -1,120 +1,47 @@
-/* --- 変数定義 (ライトモード) --- */
+/* 変数の定義 */
 :root {
-    --bg-body: #f6f6f6;
-    --bg-content: #ffffff;
-    --text-main: #202122;
-    --border-color: #a2a9b1;
-    --link-color: #0645ad;
-    --link-visited: #0b0080;
-    --header-bg: #ffffff;
-    --toc-bg: #f8f9fa;
+    --bg-color: #f9f9f9;
+    --text-color: #2c3e50;
+    --main-content-bg: #ffffff;
+    --sidebar-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --primary-color: #3498db;
+    --code-bg: #2d3436; /* コードブロックは常にダーク系が見やすい */
+    --code-text: #dfe6e9;
 }
 
-/* --- ダークモード設定 (OS設定に連動) --- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-body: #101418;
-        --bg-content: #1a1d23;
-        --text-main: #eaecf0;
-        --border-color: #44474c;
-        --link-color: #6eaafb;
-        --link-visited: #d1b1fa;
-        --header-bg: #202122;
-        --toc-bg: #2a2e33;
-    }
+/* ダークモード用の変数上書き */
+body.dark-mode {
+    --bg-color: #1a1a1b;
+    --text-color: #e0e0e0;
+    --main-content-bg: #2d2d2e;
+    --sidebar-bg: #2d2d2e;
+    --border-color: #404040;
+    --primary-color: #5dade2; /* 少し明るめの青に調整 */
 }
 
-/* --- ベーススタイル --- */
+/* 各要素に変数を使用（一部抜粋） */
 body {
-    font-family: sans-serif;
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    margin: 0;
-    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /* 切り替えを滑らかに */
 }
 
-/* --- ヘッダー & パンくず --- */
-.wiki-header {
-    background-color: var(--header-bg);
-    border-bottom: 1px solid var(--border-color);
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.main-content, .sidebar {
+    background-color: var(--main-content-bg);
+    border: 1px solid var(--border-color);
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.breadcrumb {
-    font-size: 0.8em;
-    margin-top: 10px;
-}
-
-.breadcrumb ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.breadcrumb li + li::before {
-    content: ">";
-    margin: 0 8px;
-    color: var(--border-color);
-}
-
-/* --- ハンバーガーメニュー --- */
-.hamburger {
-    width: 20px;
-    height: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* 切り替えボタンのスタイル */
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
     cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: var(--text-main);
-}
-
-/* --- メインコンテンツ --- */
-#content {
-    background-color: var(--bg-content);
+    border-radius: 20px;
     border: 1px solid var(--border-color);
-    padding: 1.5em 2em;
-    margin: 20px auto;
-    max-width: 1200px;
-}
-
-h1, h2 {
-    border-bottom: 1px solid var(--border-color);
-    font-weight: normal;
-}
-
-a {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-a:hover { text-decoration: underline; }
-
-.toc {
-    background-color: var(--toc-bg);
-    border: 1px solid var(--border-color);
-    padding: 10px;
-    display: inline-block;
-    font-size: 0.9em;
+    background: var(--main-content-bg);
+    color: var(--text-color);
+    z-index: 1000;
 }
