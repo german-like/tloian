@@ -1,90 +1,35 @@
-:root {
-    /* ライトモード: 白と金 */
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --header-bg: #ffffff;
-    --main-content-bg: #ffffff;
-    --sidebar-bg: #fdfdfd;
-    --border-color: #e0d5c1; /* 薄い金の境界線 */
-    --accent-gold: #c5a059;  /* 落ち着いた金 */
-    --hover-gold: #d4af37;   /* 明るい金 */
-    --code-bg: #2d3436;
-    --code-text: #dfe6e9;
-}
-
-body.dark-mode {
-    /* ダークモード: 黒と金 */
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --header-bg: #1a1a1a;
-    --main-content-bg: #1e1e1e;
-    --sidebar-bg: #1a1a1a;
-    --border-color: #4a3f28; /* 暗めの金の境界線 */
-    --accent-gold: #d4af37;  /* 輝きのある金 */
-    --hover-gold: #f1c40f;
-}
-
-/* ヘッダーのスタイル */
-.site-header {
-    background-color: var(--header-bg);
-    border-bottom: 2px solid var(--accent-gold);
-    padding: 0 20px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.site-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent-gold);
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-
-/* 切り替えボタン（ヘッダー内） */
-.mode-toggle {
-    background: transparent;
-    border: 1px solid var(--accent-gold);
-    color: var(--accent-gold);
-    padding: 6px 15px;
-    border-radius: 4px;
+.toggle-button-1 {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #f2f2f2;
     cursor: pointer;
-    font-size: 0.85rem;
-    transition: all 0.3s;
+    transition: background-color .4s;
 }
 
-.mode-toggle:hover {
-    background: var(--accent-gold);
-    color: var(--header-bg);
+.toggle-button-1:has(:checked) {
+    background-color: #3d3d3d;
 }
 
-/* 見出しの装飾を金に変更 */
-h1, h2 {
-    color: var(--accent-gold);
-    border-color: var(--accent-gold);
+.toggle-button-1::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    background-color: #fff;
+    content: '';
+    transition: left .4s;
 }
 
-h2 {
-    border-left: 4px solid var(--accent-gold);
+.toggle-button-1:has(:checked)::after {
+    left: 50px;
 }
 
-/* リンクの色 */
-a {
-    color: var(--accent-gold);
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--hover-gold);
-    text-decoration: underline;
-}
-
-body {
-    padding: 16px
+.toggle-button-1 input {
+    display: none;
 }
