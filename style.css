@@ -1,3 +1,9 @@
+header {
+    background: #fefefe;
+    color: #f2ea93;
+    border: 3px solid #f2ea93;
+}
+
 .toggle-button-1 {
     display: inline-block;
     position: relative;
