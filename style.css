@@ -17,7 +17,7 @@
     color: #c7be6f;
 }
 
-.header li {
+.nav-ul {
     list-style: none;
     display: flex;
     justify-content: flex-end; /* ナビゲーションの水平方向の配置 */
