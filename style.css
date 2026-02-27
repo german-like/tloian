@@ -14,11 +14,12 @@
 
 .header a {
     text-decoration: none;
-    color: #fff;
+    color: #c7be6f;
 }
 
 .header li {
     list-style: none;
     display: flex;
     justify-content: flex-end; /* ナビゲーションの水平方向の配置 */
+    color: #c7be6f;
 }
