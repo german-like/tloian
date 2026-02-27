@@ -4,13 +4,11 @@
     margin: 0px;
 }
 
-
-
 .header {
   display: flex;
   justify-content: space-between;
   justify-align: center;
-  list-style: none;
+  height: 40px;
   background: #333;
 }
 
@@ -21,4 +19,6 @@
 
 .header li {
     list-style: none;
+    display: flex;
+    justify-content: flex-end; /* ナビゲーションの水平方向の配置 */
 }
