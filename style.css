@@ -1,23 +1,115 @@
-.container {
-    width: 40%;
-    margin-left: auto;
+body{
+    margin:0;
+    font-family:sans-serif;
 }
 
-.card {
-    border: 1px solid #2b6799;
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#222;
+    color:white;
+    padding:15px;
+    position:relative;
 }
 
-.c-head {
-    background: #2b6799;
-    color: #fff;
-    height: 24px;
-    padding: 4px;
-    font-size: 16px;
+.logo{
+    font-size:20px;
+    font-weight:bold;
 }
 
-.c-body {
-    background: #fcfdff;
-    height: 32px;
-    padding: 4px;
-    font-size: 8px;
+nav ul{
+    list-style:none;
+    display:flex;
+    margin:0;
+    padding:0;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    cursor:pointer;
+}
+
+.hamburger span{
+    height:3px;
+    width:25px;
+    background:white;
+    margin:4px 0;
+}
+
+/* スマホ用 */
+
+@media (max-width:768px){
+
+nav{
+    display:none;
+    position:absolute;
+    top:60px;
+    right:0;
+    background:#333;
+    width:200px;
+}
+
+nav ul{
+    flex-direction:column;
+}
+
+nav ul li{
+    margin:10px;
+}
+
+nav.active{
+    display:block;
+}
+
+.hamburger{
+    display:flex;
+}
+
+}
+
+/* メイン */
+
+main{
+    padding:40px;
+}
+
+/* フッター */
+
+footer{
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-around;
+    padding:30px;
+    flex-wrap:wrap;
+}
+
+footer h3{
+    margin-top:0;
+}
+
+.footer-links a{
+    display:block;
+    color:#ccc;
+    text-decoration:none;
+    margin:5px 0;
+}
+
+.footer-links a:hover{
+    color:white;
+}
+
+.footer-update ul{
+    padding-left:20px;
 }
