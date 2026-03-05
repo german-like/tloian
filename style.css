@@ -3,12 +3,6 @@ body{
     font-family:sans-serif;
 }
 
-sub{
-    color:#555;
-    font-size:0.7em;
-    border-top:2px solid #222;
-}
-
 header{
     display:flex;
     justify-content:space-between;
@@ -87,6 +81,13 @@ nav.active{
 /* メイン */
 
 main{
+    padding:40px;
+}
+
+sub{
+    color:#555;
+    font-size:0.7em;
+    border-top:2px solid #222;
     padding:40px;
 }
 
