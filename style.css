@@ -1,7 +1,7 @@
 .container {
     width: 40%;
     display: flex;
-    justify-content: flex-start; /* コンテンツを左寄せ */
+    justify-content: flex-end; /* コンテンツを右寄せに */
 }
 
 .card {
