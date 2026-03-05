@@ -3,6 +3,12 @@ body{
     font-family:sans-serif;
 }
 
+sub{
+    color:#555;
+    font-size:0.7em;
+    border-top:2px solid #222;
+}
+
 header{
     display:flex;
     justify-content:space-between;
