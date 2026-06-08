@@ -97,13 +97,13 @@ main a{
     text-decoration:none;
 }
 
-main ul::marker {
+main ul > li {
     color: #111;
     position: relative;
     padding: 0px 0px 0px 1em;
 }
 
-main ul::before {
+main ul > li::before {
     position: absolute;
     top: 50%;
     left: 0px;
