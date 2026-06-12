@@ -97,13 +97,17 @@ main a{
     text-decoration:none;
 }
 
-main ul > li {
+main li{
+  list-style: none;
+}
+
+main ul > li{
     color: #111;
     position: relative;
     padding: 0px 0px 0px 1em;
 }
 
-main ul > li::before {
+main ul > li::before{
     position: absolute;
     top: 50%;
     left: 0px;
@@ -111,7 +115,7 @@ main ul > li::before {
     width: 0px;
     height: 0px;
     border: 0.3em solid transparent;
-    border-left: 0.4em solid #3388dd;
+    border-left: 0.6em solid #000;
     content: "";
 }
 
