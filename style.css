@@ -165,10 +165,10 @@ main ul > li::before {
 
 /* 追加：モノトーンのテーブルスタイリング */
 main table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     margin: 30px 0;
-    font-size: 15px;
+    font-size: 10px;
     line-height: 1.6;
 }
 
@@ -177,12 +177,12 @@ main th {
     color: #ffffff;
     font-weight: 600;
     text-align: left;
-    padding: 14px 16px;
-    letter-spacing: 0.05em;
+    padding: 2px;
+    letter-spacing: 0.0em;
 }
 
 main td {
-    padding: 14px 16px;
+    padding: 2px 2px;
     border-bottom: 1px solid #eeeeee;
     color: #333333;
 }
