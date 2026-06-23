@@ -169,6 +169,7 @@ main table {
     margin: 30px 0;
     font-size: 15px;
     line-height: 1.6;
+    border-collapse: collapse;
 }
 
 main th {
@@ -177,7 +178,6 @@ main th {
     font-weight: 600;
     text-align: left;
     padding: 2px;
-    border-collapse: collapse;
     letter-spacing: 0.0em;
 }
 
