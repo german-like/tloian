@@ -177,6 +177,7 @@ main th {
     font-weight: 600;
     text-align: left;
     padding: 2px;
+    border-collapse: collapse;
     letter-spacing: 0.0em;
 }
 
