@@ -1,150 +1,237 @@
-body{
-    margin:0;
-    font-family:sans-serif;
+body {
+    margin: 0;
+    /* 高級感のある明朝体（セリフ体）を指定。英数字にはTimes New Romanを適用 */
+    font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "MS Mincho", serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    -webkit-font-smoothing: antialiased;
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#222;
-    color:white;
-    padding:15px;
-    position:relative;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* わずかにニュアンスのある黒で上質に */
+    background: #111111;
+    color: #ffffff;
+    padding: 20px 40px; /* 余白を広げてエレガントに */
+    position: relative;
+    border-bottom: 1px solid #222222;
 }
 
-.logo{
-    font-size:20px;
-    font-weight:bold;
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.15em; /* 明朝体が映えるよう文字間を広めに入力 */
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    margin:0;
-    padding:0;
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li{
-    margin-left:20px;
+nav ul li {
+    margin-left: 30px;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    transition: opacity 0.3s ease; /* なめらかなホバー効果 */
 }
 
-.hamburger{
-    display:none;
-    flex-direction:column;
-    cursor:pointer;
+nav a:hover {
+    opacity: 0.7;
 }
 
-.hamburger span{
-    height:3px;
-    width:25px;
-    background:white;
-    margin:4px 0;
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 2px; /* 細くしてシャープな印象に */
+    width: 25px;
+    background: #ffffff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
 }
 
 /* スマホ用 */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
 
-@media (max-width:768px){
+    nav {
+        display: none;
+        position: absolute;
+        top: 61px; /* headerの高さに合わせて微調整 */
+        right: 0;
+        background: #111111;
+        width: 200px;
+        border-left: 1px solid #222222;
+        border-bottom: 1px solid #222222;
+        z-index: 100;
+    }
 
-nav{
-    display:none;
-    position:absolute;
-    top:60px;
-    right:0;
-    background:#333;
-    width:200px;
-}
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
 
-nav ul{
-    flex-direction:column;
-}
+    nav ul li {
+        margin: 0;
+    }
 
-nav ul li{
-    margin:10px;
-}
+    nav a {
+        display: block;
+        padding: 15px 20px;
+    }
 
-nav.active{
-    display:block;
-}
+    nav a:hover {
+        background: #222222;
+        opacity: 1;
+    }
 
-.hamburger{
-    display:flex;
-}
+    nav.active {
+        display: block;
+    }
 
+    .hamburger {
+        display: flex;
+    }
 }
 
 /* メイン */
-
-main{
-    padding:40px;
+main {
+    max-width: 1000px; /* コンテンツが横に広がりすぎないように制限 */
+    margin: 0 auto;
+    padding: 60px 40px;
 }
 
-sub{
-    color:#555;
-    font-size:0.7em;
-    padding:40px;
-    margin:40px
+sub {
+    display: inline-block; /* 正しくマージンとパディングを効かせるため */
+    color: #888888;
+    font-size: 0.75em;
+    padding: 40px;
+    margin: 40px;
+    letter-spacing: 0.05em;
 }
 
-main a{
-    color: #111;
-    font-weight: bold;
-    text-decoration:none;
+main a {
+    color: #111111;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #111111; /* 繊細な下線デザイン */
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
 }
 
-main li{
-  list-style: none;
+main a:hover {
+    opacity: 0.6;
 }
 
-main ul > li{
-    color: #111;
+main li {
+    list-style: none;
+}
+
+main ul > li {
+    color: #111111;
     position: relative;
-    padding: 0px 0px 0px 1em;
+    padding: 0px 0px 0px 1.5em;
+    margin-bottom: 0.75em;
+    line-height: 1.8; /* 明朝体の読みやすさのために行間を少し広めに出力 */
 }
 
-main ul > li::before{
+/* リストの矢印を細身にしてフォントに馴染ませる */
+main ul > li::before {
     position: absolute;
     top: 50%;
     left: 0px;
     transform: translateY(-50%);
     width: 0px;
     height: 0px;
-    border: 0.3em solid transparent;
-    border-left: 0.6em solid #000;
+    border: 0.25em solid transparent;
+    border-left: 0.5em solid #111111;
     content: "";
 }
 
+/* 追加：モノトーンのテーブルスタイリング */
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+main th {
+    background-color: #111111;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: left;
+    padding: 14px 16px;
+    letter-spacing: 0.05em;
+}
+
+main td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+}
+
+main tr:hover td {
+    background-color: #f9f9f9; /* 控えめなマウスホバー効果 */
+}
+
 /* フッター */
-
-footer{
-    background:#111;
-    color:white;
-    display:flex;
-    justify-content:space-around;
-    padding:30px;
-    flex-wrap:wrap;
+footer {
+    background: #000000; /* 完全な黒で最下部を引き締める */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 40px; /* 縦の余白を広げて厳かな印象に */
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-footer h3{
-    margin-top:0;
+footer h3 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 20px;
+    border-left: 2px solid #ffffff; /* 左側に白のアクセント線 */
+    padding-left: 10px;
 }
 
-.footer-links a{
-    display:block;
-    color:#ccc;
-    text-decoration:none;
-    margin:5px 0;
+.footer-links a {
+    display: block;
+    color: #a0a0a0;
+    text-decoration: none;
+    margin: 8px 0;
+    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
-.footer-links a:hover{
-    color:white;
+.footer-links a:hover {
+    color: #ffffff;
 }
 
-.footer-update ul{
-    padding-left:20px;
+.footer-update ul {
+    padding-left: 20px;
+    margin: 0;
+    color: #a0a0a0;
+    font-size: 14px;
+}
+
+.footer-update li {
+    margin-bottom: 8px;
 }
