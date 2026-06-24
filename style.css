@@ -163,6 +163,28 @@ main ul > li::before {
     content: "";
 }
 
+main h1 {
+    margin-top: 0;
+    font-size: 32px;
+    letter-spacing: 0.0em;
+    margin-bottom: 10px;
+    border-left: 2px solid #ffffff;
+    background-color: #111111;
+    border-left: 2px solid #ffffff;
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+main h2 {
+    margin-top: 0;
+    font-size: 24px;
+    letter-spacing: 0.0em;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
 /* 追加：モノトーンのテーブルスタイリング */
 main table {
     width: 90%;
