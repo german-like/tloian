@@ -173,7 +173,7 @@ main h1 {
     width: 100vw;
     margin-inline: calc(50% - 50vw);
     box-sizing: border-box;
-    padding-left: 20px;
+    padding: 10px;
 }
 
 main h2 {
